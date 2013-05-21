@@ -7,6 +7,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'blog.views.index'),
+    url(r'^(?P<slug>[\w\-]+)/$', 'blog.views.post'),
     # url(r'^$', 'netmag.views.home', name='home'),
     # url(r'^netmag/', include('netmag.foo.urls')),
 
